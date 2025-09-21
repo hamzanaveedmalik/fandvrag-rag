@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 
 // Loud request logger
-app.use((req, _res, next) => {
+app.use((req: any, _res: any, next: any) => {
   console.log(new Date().toISOString(), req.method, req.url);
   next();
 });
@@ -54,9 +54,9 @@ function extractText(p: any): string {
   return '';
 }
 
-app.get('/health', (_req, res) => res.json({ ok: true }));
+app.get('/health', (_req: any, res: any) => res.json({ ok: true }));
 
-app.post('/webhooks/tawk', async (req, res) => {
+app.post('/webhooks/tawk', async (req: any, res: any) => {
   try {
     if (!verifySignature(req)) return res.status(401).send('Invalid signature');
 
