@@ -16,15 +16,8 @@ async function checkQuota() {
     console.log('✅ API is working! Successfully created embedding.');
     console.log(`Embedding dimension: ${response.data[0].embedding.length}`);
     
-    // Try to get usage information (if available)
-    try {
-      const usage = await openai.usage.retrieve();
-      console.log('\n📊 Usage Information:');
-      console.log(`Total usage: $${usage.total_usage / 100}`);
-      console.log(`Daily usage: $${usage.daily_costs?.total / 100 || 'N/A'}`);
-    } catch (usageError) {
-      console.log('ℹ️  Usage information not available (this is normal for some account types)');
-    }
+    // Usage information is not available via the current OpenAI SDK
+    console.log('ℹ️  Usage information can be checked at: https://platform.openai.com/usage');
     
   } catch (error: any) {
     console.error('❌ API Error:');
