@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: fandvrag-rag-server
+    env: node
+    plan: free
+    buildCommand: cd server && npm install
+    startCommand: cd server && npx tsx src/index.ts
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false

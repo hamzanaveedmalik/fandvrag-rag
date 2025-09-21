@@ -1,0 +1,125 @@
+sku,category,subcategory,name,leather,finish,color,moq,lead_time_days,sample_available,sample_fee
+FV-WL-001,Wallets,Wallets,Bi-Fold Leather Wallet,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-002,Wallets,Wallets,Bi-Fold Leather Wallet — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-003,Wallets,Wallets,Tri-Fold Leather Wallet,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-004,Wallets,Wallets,Tri-Fold Leather Wallet — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-005,Wallets,Wallets,Slim Leather Cardholder,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-006,Wallets,Wallets,Slim Leather Cardholder — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-007,Wallets,Wallets,Zipper Leather Wallet,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-008,Wallets,Wallets,Zipper Leather Wallet — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-009,Wallets,Wallets,RFID Blocking Leather Wallet,Top-grain cowhide,RFID-lined,Black,100,12,true,8
+FV-WL-010,Wallets,Wallets,RFID Blocking Leather Wallet — Tan,Top-grain cowhide,RFID-lined,Tan,100,12,true,8
+FV-WL-011,Wallets,Wallets,Travel Leather Wallet,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-012,Wallets,Wallets,Travel Leather Wallet — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-013,Wallets,Wallets,Leather Coin Pouch,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-014,Wallets,Wallets,Leather Coin Pouch — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-015,Wallets,Wallets,Passport Holders,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-WL-016,Wallets,Wallets,Passport Holders — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-WL-017,Wallets,Wallets,RFID-blocking Wallets,Top-grain cowhide,RFID-lined,Black,100,12,true,8
+FV-WL-018,Wallets,Wallets,RFID-blocking Wallets — Tan,Top-grain cowhide,RFID-lined,Tan,100,12,true,8
+FV-BG-001,Bags,Bags,Tote Bags (Women's),Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-002,Bags,Bags,Tote Bags (Women's) — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-003,Bags,Bags,Messenger Bags,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-004,Bags,Bags,Messenger Bags — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-005,Bags,Bags,Crossbody Bags,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-006,Bags,Bags,Crossbody Bags — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-007,Bags,Bags,Laptop Bags,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-008,Bags,Bags,Laptop Bags — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-009,Bags,Bags,Backpacks,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-010,Bags,Bags,Backpacks — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-011,Bags,Bags,Duffle Bags (Travel),Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-012,Bags,Bags,Duffle Bags (Travel) — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-013,Bags,Bags,Sling Bags,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-014,Bags,Bags,Sling Bags — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-015,Bags,Bags,Camera Bags,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-016,Bags,Bags,Camera Bags — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-017,Bags,Bags,Clutch & Evening Bags,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-018,Bags,Bags,Clutch & Evening Bags — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-019,Bags,Bags,Leather Coin Purse,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-BG-020,Bags,Bags,Leather Coin Purse — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-BG-021,Bags,Bags,Leather Belt Pouch,Veg-tan cowhide,Veg-tan,Black,120,20,true,12
+FV-BG-022,Bags,Bags,Leather Belt Pouch — Tan,Veg-tan cowhide,Veg-tan,Tan,120,20,true,12
+FV-BG-023,Bags,Bags,Leather Mini Clutch,Top-grain cowhide,Pebble,Black,60,28,true,25
+FV-BG-024,Bags,Bags,Leather Mini Clutch — Tan,Top-grain cowhide,Pebble,Tan,60,28,true,25
+FV-BG-025,Bags,Bags,Leather Phone Sleeve,Top-grain cowhide,Pebble,Black,100,18,true,12
+FV-BG-026,Bags,Bags,Leather Phone Sleeve — Tan,Top-grain cowhide,Pebble,Tan,100,18,true,12
+FV-BG-027,Bags,Bags,Leather Bracelet,Veg-tan cowhide,Veg-tan,Black,150,12,true,6
+FV-BG-028,Bags,Bags,Leather Bracelet — Tan,Veg-tan cowhide,Veg-tan,Tan,150,12,true,6
+FV-OF-001,Office & Lifestyle,Office & Lifestyle,Leather Notebooks / Journals,Top-grain cowhide,Saffiano,Black,80,18,true,12
+FV-OF-002,Office & Lifestyle,Office & Lifestyle,Leather Notebooks / Journals — Tan,Top-grain cowhide,Saffiano,Tan,80,18,true,12
+FV-OF-003,Office & Lifestyle,Office & Lifestyle,Desk Mats,Top-grain cowhide,Saffiano,Black,80,18,true,12
+FV-OF-004,Office & Lifestyle,Office & Lifestyle,Desk Mats — Tan,Top-grain cowhide,Saffiano,Tan,80,18,true,12
+FV-OF-005,Office & Lifestyle,Office & Lifestyle,Pen Holders,Top-grain cowhide,Saffiano,Black,80,18,true,12
+FV-OF-006,Office & Lifestyle,Office & Lifestyle,Pen Holders — Tan,Top-grain cowhide,Saffiano,Tan,80,18,true,12
+FV-OF-007,Office & Lifestyle,Office & Lifestyle,Laptop Sleeves,Full-grain cowhide,Semi-aniline,Black,80,18,true,15
+FV-OF-008,Office & Lifestyle,Office & Lifestyle,Laptop Sleeves — Tan,Full-grain cowhide,Semi-aniline,Tan,80,18,true,15
+FV-OF-009,Office & Lifestyle,Office & Lifestyle,Key Holders / Keychains,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-OF-010,Office & Lifestyle,Office & Lifestyle,Key Holders / Keychains — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-OF-011,Office & Lifestyle,Office & Lifestyle,Card Folios / Portfolios,Top-grain cowhide,Saffiano,Black,80,18,true,12
+FV-OF-012,Office & Lifestyle,Office & Lifestyle,Card Folios / Portfolios — Tan,Top-grain cowhide,Saffiano,Tan,80,18,true,12
+FV-KC-001,Keychains,Keychains,Leather Loop Keychain,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-KC-002,Keychains,Keychains,Leather Loop Keychain — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-KC-003,Keychains,Keychains,Personalized Leather Keychain,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-KC-004,Keychains,Keychains,Personalized Leather Keychain — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-KC-005,Keychains,Keychains,Braided Leather Keychain,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-KC-006,Keychains,Keychains,Braided Leather Keychain — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-KC-007,Keychains,Keychains,Leather Key Holder Pouch,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-KC-008,Keychains,Keychains,Leather Key Holder Pouch — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-KC-009,Keychains,Keychains,Leather Fob Keychain,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-KC-010,Keychains,Keychains,Leather Fob Keychain — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-AC-001,Accessories,Accessories,Leather Passport Holder,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-AC-002,Accessories,Accessories,Leather Passport Holder — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-AC-003,Accessories,Accessories,Leather Card Holder,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-AC-004,Accessories,Accessories,Leather Card Holder — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-AC-005,Accessories,Accessories,Leather Notebook Cover,Top-grain cowhide,Saffiano,Black,80,18,true,12
+FV-AC-006,Accessories,Accessories,Leather Notebook Cover — Tan,Top-grain cowhide,Saffiano,Tan,80,18,true,12
+FV-AC-007,Accessories,Accessories,Leather Sunglasses Case,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-AC-008,Accessories,Accessories,Leather Sunglasses Case — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-AC-009,Accessories,Accessories,Leather Cable Organizer,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-AC-010,Accessories,Accessories,Leather Cable Organizer — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-AC-011,Accessories,Accessories,Leather AirPods Case,Top-grain cowhide,Pebble,Black,150,12,true,6
+FV-AC-012,Accessories,Accessories,Leather AirPods Case — Tan,Top-grain cowhide,Pebble,Tan,150,12,true,6
+FV-TR-001,Travel Essentials,Travel Essentials,Luggage Tags,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-TR-002,Travel Essentials,Travel Essentials,Luggage Tags — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-TR-003,Travel Essentials,Travel Essentials,Leather Toiletry Bags (Dopp Kits),Top-grain cowhide,Pebble,Black,80,22,true,15
+FV-TR-004,Travel Essentials,Travel Essentials,Leather Toiletry Bags (Dopp Kits) — Tan,Top-grain cowhide,Pebble,Tan,80,22,true,15
+FV-TR-005,Travel Essentials,Travel Essentials,Travel Organizers,Top-grain cowhide,Pebble,Black,80,22,true,15
+FV-TR-006,Travel Essentials,Travel Essentials,Travel Organizers — Tan,Top-grain cowhide,Pebble,Tan,80,22,true,15
+FV-PA-001,Pet Accessories,Pet Accessories,Leather Dog Collars,Top-grain cowhide,Pebble,Black,120,16,true,8
+FV-PA-002,Pet Accessories,Pet Accessories,Leather Dog Collars — Tan,Top-grain cowhide,Pebble,Tan,120,16,true,8
+FV-PA-003,Pet Accessories,Pet Accessories,Pet Harnesses,Top-grain cowhide,Pebble,Black,120,16,true,8
+FV-PA-004,Pet Accessories,Pet Accessories,Pet Harnesses — Tan,Top-grain cowhide,Pebble,Tan,120,16,true,8
+FV-FA-001,Fashion Accessories,Fashion Accessories,Leather Belts (Formal/Casual),Veg-tan cowhide,Veg-tan,Black,120,20,true,12
+FV-FA-002,Fashion Accessories,Fashion Accessories,Leather Belts (Formal/Casual) — Tan,Veg-tan cowhide,Veg-tan,Tan,120,20,true,12
+FV-FA-003,Fashion Accessories,Fashion Accessories,Leather Bracelets,Veg-tan cowhide,Veg-tan,Black,150,12,true,6
+FV-FA-004,Fashion Accessories,Fashion Accessories,Leather Bracelets — Tan,Veg-tan cowhide,Veg-tan,Tan,150,12,true,6
+FV-FA-005,Fashion Accessories,Fashion Accessories,Sunglass Cases,Top-grain cowhide,Pebble,Black,100,12,true,8
+FV-FA-006,Fashion Accessories,Fashion Accessories,Sunglass Cases — Tan,Top-grain cowhide,Pebble,Tan,100,12,true,8
+FV-FA-007,Fashion Accessories,Fashion Accessories,Watch Straps,Top-grain cowhide,Calfskin,Black,150,16,true,8
+FV-FA-008,Fashion Accessories,Fashion Accessories,Watch Straps — Tan,Top-grain cowhide,Calfskin,Tan,150,16,true,8
+FV-JK-001,Jackets,Jackets,Biker Jackets,Sheepskin,Nappa,Black,30,35,true,60
+FV-JK-002,Jackets,Jackets,Biker Jackets — Tan,Sheepskin,Nappa,Tan,30,35,true,60
+FV-JK-003,Jackets,Jackets,Bomber Jackets,Sheepskin,Nappa,Black,30,35,true,60
+FV-JK-004,Jackets,Jackets,Bomber Jackets — Tan,Sheepskin,Nappa,Tan,30,35,true,60
+FV-JK-005,Jackets,Jackets,Suede Jackets,Sheepskin,Suede,Black,30,35,true,60
+FV-JK-006,Jackets,Jackets,Suede Jackets — Tan,Sheepskin,Suede,Tan,30,35,true,60
+FV-JK-007,Jackets,Jackets,Formal Leather Blazers,Sheepskin,Nappa,Black,30,35,true,60
+FV-JK-008,Jackets,Jackets,Formal Leather Blazers — Tan,Sheepskin,Nappa,Tan,30,35,true,60
+FV-JK-009,Jackets,Jackets,Long Leather Coats,Sheepskin,Nappa,Black,30,35,true,60
+FV-JK-010,Jackets,Jackets,Long Leather Coats — Tan,Sheepskin,Nappa,Tan,30,35,true,60
+FV-GL-001,Gloves,Gloves,Winter Leather Gloves,Sheepskin,Nappa,Black,120,18,true,10
+FV-GL-002,Gloves,Gloves,Winter Leather Gloves — Tan,Sheepskin,Nappa,Tan,120,18,true,10
+FV-GL-003,Gloves,Gloves,Driving Gloves,Sheepskin,Nappa,Black,120,18,true,10
+FV-GL-004,Gloves,Gloves,Driving Gloves — Tan,Sheepskin,Nappa,Tan,120,18,true,10
+FV-GL-005,Gloves,Gloves,Touchscreen-Compatible Gloves,Sheepskin,Nappa,Black,120,18,true,10
+FV-GL-006,Gloves,Gloves,Touchscreen-Compatible Gloves — Tan,Sheepskin,Nappa,Tan,120,18,true,10
+FV-GL-007,Gloves,Gloves,Fashion Gloves (Unisex),Sheepskin,Nappa,Black,120,18,true,10
+FV-GL-008,Gloves,Gloves,Fashion Gloves (Unisex) — Tan,Sheepskin,Nappa,Tan,120,18,true,10
+FV-BR-001,Bracelets,Bracelets,Braided Leather Bracelets,Veg-tan cowhide,Veg-tan,Black,150,12,true,6
+FV-BR-002,Bracelets,Bracelets,Braided Leather Bracelets — Tan,Veg-tan cowhide,Veg-tan,Tan,150,12,true,6
+FV-BR-003,Bracelets,Bracelets,Cuff Bracelets,Veg-tan cowhide,Veg-tan,Black,150,12,true,6
+FV-BR-004,Bracelets,Bracelets,Cuff Bracelets — Tan,Veg-tan cowhide,Veg-tan,Tan,150,12,true,6
+FV-BR-005,Bracelets,Bracelets,Custom Logo/Monogram Bracelets,Veg-tan cowhide,Veg-tan,Black,150,12,true,6
+FV-BR-006,Bracelets,Bracelets,Custom Logo/Monogram Bracelets — Tan,Veg-tan cowhide,Veg-tan,Tan,150,12,true,6
+FV-BR-007,Bracelets,Bracelets,Adjustable Wrap Bracelets,Veg-tan cowhide,Veg-tan,Black,150,12,true,6
+FV-BR-008,Bracelets,Bracelets,Adjustable Wrap Bracelets — Tan,Veg-tan cowhide,Veg-tan,Tan,150,12,true,6

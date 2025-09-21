@@ -1,0 +1,14 @@
+{
+  "name": "forthandvale-rag-tawk",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "server",
+    "ingest"
+  ],
+  "scripts": {
+    "build": "npm -w server run build && npm -w ingest run build",
+    "dev:server": "npm -w server run dev",
+    "dev:ingest": "npm -w ingest run dev"
+  }
+}
