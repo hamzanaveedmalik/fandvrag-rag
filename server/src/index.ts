@@ -56,6 +56,95 @@ function extractText(p: any): string {
 
 app.get('/health', (_req: any, res: any) => res.json({ ok: true }));
 
+// Crisp webhook endpoint
+app.post('/webhooks/crisp', async (req: any, res: any) => {
+  try {
+    if (!verifySignature(req)) return res.status(401).send('Invalid signature');
+
+    // Dump full payload once for debugging
+    console.log('Crisp webhook payload:', JSON.stringify(req.body, null, 2));
+
+    const payload = req.body || {};
+    const message = payload.data?.message?.content || '';
+    const visitor = payload.data?.visitor || {};
+    const meta = visitor.attributes || visitor.attrs || {};
+
+    if (!message) {
+      console.log('No message text found in Crisp payload. Acking.');
+      return res.status(200).send('OK');
+    }
+
+    console.log('Extracted message:', message);
+
+    // Retrieve context
+    const { citations } = await answer(message);
+
+    // Build reply
+    const sys = buildSystemPrompt();
+    const usr = buildUserPrompt(message, citations);
+    const chat = await openai.chat.completions.create({
+      model: 'gpt-4o-mini',
+      temperature: 0.2,
+      messages: [
+        { role: 'system', content: sys },
+        { role: 'user', content: usr }
+      ]
+    });
+
+    const reply =
+      chat.choices[0]?.message?.content?.trim() ||
+      "Thanks! We'll follow up by email. Could I get your name, work email, company, country, and product interest?";
+
+    console.log('Drafted reply:\n', reply);
+
+    // Auto-reply via Crisp API
+    if (process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
+      try {
+        const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data.session_id}/message`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Basic ${Buffer.from(process.env.CRISP_API_KEY + ':').toString('base64')}`
+          },
+          body: JSON.stringify({
+            type: 'text',
+            content: reply,
+            from: 'operator',
+            origin: 'chat'
+          })
+        });
+        
+        if (crispResponse.ok) {
+          console.log('✅ Auto-reply sent to Crisp widget');
+        } else {
+          console.log('❌ Failed to send auto-reply to Crisp:', await crispResponse.text());
+        }
+      } catch (error) {
+        console.error('Crisp API error:', error);
+      }
+    } else {
+      console.log('ℹ️  Crisp API credentials not configured - skipping auto-reply');
+    }
+
+    // Optional: operator Slack notify
+    if (process.env.SLACK_WEBHOOK_URL) {
+      await fetch(process.env.SLACK_WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text: `*New inquiry:* ${message}\n*Suggested reply:*\n${reply}\n\n*Visitor:* ${visitor?.name || ''} ${visitor?.email || ''}\n*UTMs:* ${JSON.stringify(meta)}`
+        })
+      }).catch((e) => console.error('Slack notify failed:', e));
+    }
+
+    return res.status(200).send('OK');
+  } catch (e) {
+    console.error('Crisp webhook error:', e);
+    return res.status(200).send('OK');
+  }
+});
+
+// Tawk.to webhook endpoint (for backward compatibility)
 app.post('/webhooks/tawk', async (req: any, res: any) => {
   try {
     if (!verifySignature(req)) return res.status(401).send('Invalid signature');
@@ -96,34 +185,33 @@ app.post('/webhooks/tawk', async (req: any, res: any) => {
 
     console.log('Drafted reply:\n', reply);
 
-    // Auto-reply via Tawk.to API
-    if (process.env.TAWK_API_KEY && process.env.TAWK_SITE_ID) {
+    // Auto-reply via Crisp API
+    if (process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
       try {
-        const tawkResponse = await fetch(`https://api.tawk.to/v1/chat/${process.env.TAWK_SITE_ID}/message`, {
+        const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data.session_id}/message`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.TAWK_API_KEY}`
+            'Authorization': `Basic ${Buffer.from(process.env.CRISP_API_KEY + ':').toString('base64')}`
           },
           body: JSON.stringify({
-            message: reply,
-            visitor: {
-              name: visitor?.name || 'Customer',
-              email: visitor?.email || 'customer@example.com'
-            }
+            type: 'text',
+            content: reply,
+            from: 'operator',
+            origin: 'chat'
           })
         });
         
-        if (tawkResponse.ok) {
-          console.log('✅ Auto-reply sent to Tawk.to widget');
+        if (crispResponse.ok) {
+          console.log('✅ Auto-reply sent to Crisp widget');
         } else {
-          console.log('❌ Failed to send auto-reply to Tawk.to:', await tawkResponse.text());
+          console.log('❌ Failed to send auto-reply to Crisp:', await crispResponse.text());
         }
       } catch (error) {
-        console.error('Tawk.to API error:', error);
+        console.error('Crisp API error:', error);
       }
     } else {
-      console.log('ℹ️  Tawk.to API credentials not configured - skipping auto-reply');
+      console.log('ℹ️  Crisp API credentials not configured - skipping auto-reply');
     }
 
     // Optional: operator Slack notify
