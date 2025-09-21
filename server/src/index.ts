@@ -96,6 +96,36 @@ app.post('/webhooks/tawk', async (req: any, res: any) => {
 
     console.log('Drafted reply:\n', reply);
 
+    // Auto-reply via Tawk.to API
+    if (process.env.TAWK_API_KEY && process.env.TAWK_SITE_ID) {
+      try {
+        const tawkResponse = await fetch(`https://api.tawk.to/v1/chat/${process.env.TAWK_SITE_ID}/message`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${process.env.TAWK_API_KEY}`
+          },
+          body: JSON.stringify({
+            message: reply,
+            visitor: {
+              name: visitor?.name || 'Customer',
+              email: visitor?.email || 'customer@example.com'
+            }
+          })
+        });
+        
+        if (tawkResponse.ok) {
+          console.log('✅ Auto-reply sent to Tawk.to widget');
+        } else {
+          console.log('❌ Failed to send auto-reply to Tawk.to:', await tawkResponse.text());
+        }
+      } catch (error) {
+        console.error('Tawk.to API error:', error);
+      }
+    } else {
+      console.log('ℹ️  Tawk.to API credentials not configured - skipping auto-reply');
+    }
+
     // Optional: operator Slack notify
     if (process.env.SLACK_WEBHOOK_URL) {
       await fetch(process.env.SLACK_WEBHOOK_URL, {
@@ -106,8 +136,6 @@ app.post('/webhooks/tawk', async (req: any, res: any) => {
         })
       }).catch((e) => console.error('Slack notify failed:', e));
     }
-
-    // NOTE: To auto-reply in-widget, call Tawk's REST (if enabled for your account).
 
     return res.status(200).send('OK');
   } catch (e) {
