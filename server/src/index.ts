@@ -99,13 +99,13 @@ app.post('/webhooks/crisp', async (req: any, res: any) => {
     console.log('Drafted reply:\n', reply);
 
     // Auto-reply via Crisp API
-    if (process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
+    if (process.env.CRISP_API_IDENTIFIER && process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
       try {
         const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data?.session_id || req.body.data?.message?.session_id || 'unknown'}/message`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Basic ${Buffer.from(process.env.CRISP_API_KEY + ':').toString('base64')}`
+            'Authorization': `Basic ${Buffer.from(process.env.CRISP_API_IDENTIFIER + ':' + process.env.CRISP_API_KEY).toString('base64')}`
           },
           body: JSON.stringify({
             type: 'text',
@@ -187,13 +187,13 @@ app.post('/webhooks/tawk', async (req: any, res: any) => {
     console.log('Drafted reply:\n', reply);
 
     // Auto-reply via Crisp API
-    if (process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
+    if (process.env.CRISP_API_IDENTIFIER && process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
       try {
         const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data?.session_id || req.body.data?.message?.session_id || 'unknown'}/message`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Basic ${Buffer.from(process.env.CRISP_API_KEY + ':').toString('base64')}`
+            'Authorization': `Basic ${Buffer.from(process.env.CRISP_API_IDENTIFIER + ':' + process.env.CRISP_API_KEY).toString('base64')}`
           },
           body: JSON.stringify({
             type: 'text',
