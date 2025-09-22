@@ -65,8 +65,9 @@ app.post('/webhooks/crisp', async (req: any, res: any) => {
     console.log('Crisp webhook payload:', JSON.stringify(req.body, null, 2));
 
     const payload = req.body || {};
-    const message = payload.data?.message?.content || '';
-    const visitor = payload.data?.visitor || {};
+    // Handle Crisp webhook format
+    const message = payload.data?.message?.content || payload.data?.content || '';
+    const visitor = payload.data?.visitor || payload.data?.user || {};
     const meta = visitor.attributes || visitor.attrs || {};
 
     if (!message) {
@@ -100,7 +101,7 @@ app.post('/webhooks/crisp', async (req: any, res: any) => {
     // Auto-reply via Crisp API
     if (process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
       try {
-        const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data.session_id}/message`, {
+        const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data?.session_id || req.body.data?.message?.session_id || 'unknown'}/message`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -188,7 +189,7 @@ app.post('/webhooks/tawk', async (req: any, res: any) => {
     // Auto-reply via Crisp API
     if (process.env.CRISP_API_KEY && process.env.CRISP_WEBSITE_ID) {
       try {
-        const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data.session_id}/message`, {
+        const crispResponse = await fetch(`https://api.crisp.chat/v1/website/${process.env.CRISP_WEBSITE_ID}/conversation/${req.body.data?.session_id || req.body.data?.message?.session_id || 'unknown'}/message`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
